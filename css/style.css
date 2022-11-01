@@ -8,7 +8,8 @@
   --primary-background-color: #2f303a;
   --secondary-background-color: #f5f4fa;
   --address-link-color: rgba(255, 255, 255, 0.6);
-  --border-line-color: #ECECEC;
+  --border-line-color: #ececec;
+  --border-item-color: #eeeeee;
 }
 
 body {
@@ -171,8 +172,7 @@ ul {
 .hero-title {
   max-width: 626px;
   margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 
   color: var(--white-color);
   font-weight: 900;
@@ -193,7 +193,6 @@ ul {
 
   color: var(--white-color);
   background-color: var(--accent-text-color);
-
 
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -241,7 +240,8 @@ ul {
   justify-content: space-between;
 }
 
-.working-list .item {}
+.working-list .item {
+}
 
 /* --------------------------------------------our team */
 
@@ -259,7 +259,6 @@ ul {
 }
 
 .team-list .item {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
   background: var(--white-color);
@@ -321,6 +320,10 @@ ul {
 /* --------------------------------------------portfolio */
 
 .portfolio-filter .radio-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+
   color: var(--secondary-text-color);
   background-color: var(--secondary-background-color);
 
@@ -332,20 +335,49 @@ ul {
   text-align: center;
 }
 
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 .portfolio-filter .radio-btn:hover,
 .portfolio-filter .radio-btn:focus {
   color: var(--white-color);
   background-color: var(--accent-text-color);
 }
 
-.portfolio-items .title {
+.portfolio-filter .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-list .img {
+  display: block;
+}
+
+.portfolio-list .title {
+  padding: 20px 24px 4px 24px;
+  border-left: 1px solid var(--border-item-color);
+  border-right: 1px solid var(--border-item-color);
+
   color: var(--secondary-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.portfolio-items .subtitle {
+.portfolio-list .subtitle {
+  padding: 0 24px 20px 24px;
+  border-left: 1px solid var(--border-item-color);
+  border-right: 1px solid var(--border-item-color);
+  border-bottom: 1px solid var(--border-item-color);
+
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.875;
