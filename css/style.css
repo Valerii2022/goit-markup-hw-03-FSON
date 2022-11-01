@@ -16,6 +16,7 @@
   --primary-background-color: #2f303a;
   --secondary-background-color: #f5f4fa;
   --address-link-color: rgba(255, 255, 255, 0.6);
+  --boredr-line-color: #ECECEC;
 }
 
 body {
@@ -25,6 +26,26 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title {
@@ -75,6 +96,27 @@ body {
 
 /* header */
 
+.page-header {
+  border: 1px solid var(--boredr-line-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+}
+
 .site-nav .link {
   color: var(--secondary-text-color);
 
@@ -87,6 +129,14 @@ body {
 .site-nav .link:focus,
 .site-nav .current {
   color: var(--accent-text-color);
+}
+
+.contacts-list {
+  display: flex;
+}
+
+.contacts-list-item:last-child {
+  margin-left: 50px;
 }
 
 .contacts-list .link {
